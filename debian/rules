@@ -16,11 +16,11 @@ CONFFLAGS_deb  = $(CONFFLAGS) \
     dpkg-buildflags --export=configure || true) \
   --libdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
   --with-rootlibdir=/lib/$(DEB_HOST_MULTIARCH) \
-  --enable-debug
+  --enable-debug --with-zlib=yes
 CONFFLAGS_udeb = $(CONFFLAGS) \
   $(subst -O2,-Os -fomit-frame-pointer,$(shell DEB_BUILD_MAINT_OPTIONS="hardening=-all" \
     dpkg-buildflags --export=configure || true)) \
-  --libdir=/lib --with-rootlibdir=/lib
+  --libdir=/lib --with-rootlibdir=/lib --with-zlib=yes
 
 ##############################################################################
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)

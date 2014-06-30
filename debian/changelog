@@ -1,3 +1,9 @@
+kmod (15-0ubuntu6zlib1) trusty; urgency=low
+
+  * Add zlib support
+
+ -- Alex Bligh <alex@alex.org.uk>  Mon, 30 Jun 2014 19:44:46 +0100
+
 kmod (15-0ubuntu6) trusty; urgency=medium
 
   * debian/rules: Install mlx4.conf in the udeb as well (LP: #1305874)
